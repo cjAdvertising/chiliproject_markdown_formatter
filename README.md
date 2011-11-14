@@ -30,6 +30,28 @@ for more details.
 
 Installed plugins are listed on __Admin -> Information__ screen.
 
+### Extra Goodies from RedCarpet
+
+By default I enabled __RedCarpet__ʼs `:fenced_code_blocks` so you can 
+syntax highlight you code snippets everywhere you like by specifying the
+language after three backticks:
+
+<pre>
+```ruby
+  def puts msg
+    Kernel.puts msg
+  end
+```
+</pre>
+
+To make use of this you have to include a pygments css theme into redmine.
+
+Simply place a pygments css like the [Solarized Light Theme](https://gist.github.com/1272660)
+under `public/stylesheets/pygments/solarized.css` and then add the following to
+`app/views/layouts/base.rhtml` right after the other `stylesheet_link_tag`s:
+
+    <%= stylesheet_link_tag 'pygments/solarized', :media => 'all' %>
+
 ### Credits
 
 * [Larry Baltz](http://github.com/bitherder) for creating the original
