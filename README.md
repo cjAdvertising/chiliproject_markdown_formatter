@@ -18,22 +18,25 @@ for more details.
 
 ## Plugin installation
 
-### Prerequisites
-
-* ChiliProject and its prerequisites
-* [redcarpet gem (>= 2.0.0b5)](https://github.com/tanoku/redcarpet)
-
 ### Installation
  
 1. Copy the plugin directory into the `vendor/plugins` directory
-2. Start ChiliProject
+2. run `bundle` to install plugin dependencies
+3. Start (or restart) ChiliProject
+
+### Dependencies
+
+* ChiliProject and its prerequisites
+* [albino](https://github.com/github/albino) for Pygments syntax highlighting 
+* [redcarpet gem (>= 2.0.0b5)](https://github.com/tanoku/redcarpet)
+
 
 Installed plugins are listed on __Admin -> Information__ screen.
 
 ### Extra Goodies from RedCarpet
 
 By default I enabled __RedCarpet__ʼs `:fenced_code_blocks` so you can 
-syntax highlight you code snippets everywhere you like by specifying the
+syntax highlight you code snippets whereever you like by specifying the
 language after three backticks:
 
 <pre>
@@ -43,6 +46,14 @@ language after three backticks:
   end
 ```
 </pre>
+
+will render as:
+
+```ruby
+  def puts msg
+    Kernel.puts msg
+  end
+```
 
 To make use of this you have to include a pygments css theme into redmine.
 
