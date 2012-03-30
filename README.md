@@ -21,14 +21,13 @@ for more details.
 ### Installation
  
 1. Copy the plugin directory into the `vendor/plugins` directory
-2. run `bundle` to install plugin dependencies
+2. run `bundle install` to install plugin dependencies
 3. Start (or restart) ChiliProject
 
 ### Dependencies
 
 * ChiliProject and its prerequisites
-* [albino](https://github.com/github/albino) for Pygments syntax highlighting 
-* [redcarpet gem (>= 2.0.0b5)](https://github.com/tanoku/redcarpet)
+* [redcarpet gem (>= 2.0.0)](https://github.com/tanoku/redcarpet)
 
 
 Installed plugins are listed on __Admin -> Information__ screen.
@@ -55,13 +54,7 @@ will render as:
   end
 ```
 
-To make use of this you have to include a pygments css theme into redmine.
-
-Simply place a pygments css like the [Solarized Light Theme](https://gist.github.com/1272660)
-under `public/stylesheets/pygments/solarized.css` and then add the following to
-`app/views/layouts/base.rhtml` right after the other `stylesheet_link_tag`s:
-
-    <%= stylesheet_link_tag 'pygments/solarized', :media => 'all' %>
+The plugin uses ChiliProject's built-in syntax highlighting, which is currently CodeRay
 
 ### Credits
 
@@ -71,4 +64,5 @@ under `public/stylesheets/pygments/solarized.css` and then add the following to
   redmine_rd_formatter
 * Jean-Philippe Lang for making the change to RedMine (based on Yuki's patch) to
   allow pluggable formatters
-
+* [artflakes](https://github.com/artflakes/redmine_markdown_formatter) for putting
+  RedCarpet into the original Redmine Markdown Formatter 

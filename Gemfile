@@ -1,3 +1,1 @@
-gem 'rdiscount'
-gem 'redcarpet', :git => "git://github.com/tanoku/redcarpet"
-gem 'albino'
+gem "redcarpet", ">= 2.1.0"
