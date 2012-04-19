@@ -22,6 +22,10 @@ end
 
 class HTMLwithSyntaxHighlighting < Redcarpet::Render::HTML
   def block_code(code, language)
-    '<pre><code class="' + language + ' syntaxhl">' + Redmine::SyntaxHighlighting.highlight_by_language(code, language) + '</code></pre>'
+    if language then
+      '<pre><code class="' + language + ' syntaxhl">' + Redmine::SyntaxHighlighting.highlight_by_language(code, language) + '</code></pre>'
+    else
+      '<pre>' + code + '</pre>'
+    end
   end
 end
