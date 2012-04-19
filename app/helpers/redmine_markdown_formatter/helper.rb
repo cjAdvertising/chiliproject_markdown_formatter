@@ -4,8 +4,7 @@ module RedmineMarkdownFormatter
 
     def wikitoolbar_for(field_id)
       
-      url = Redmine::Utils.relative_url_root + 
-            Engines::RailsExtensions::AssetHelpers.plugin_asset_path('redmine_markdown_formatter', 'help', 'markdown_syntax.html')
+      url = Engines::RailsExtensions::AssetHelpers.plugin_asset_path('redmine_markdown_formatter', 'help', 'markdown_syntax.html')
 
       help_link = l(:setting_text_formatting) + ': ' +
                   link_to(l(:label_help), url,
