@@ -9,5 +9,5 @@ Redmine::Plugin.register :chiliproject_markdown_formatter do
   description 'This provides Markdown as a wiki format'
   version '0.0.1'
 
-  wiki_format_provider 'markdown', ChiliProjectMarkdownFormatter::WikiFormatter, ChiliProjectMarkdownFormatter::Helper
+  wiki_format_provider 'markdown', ChiliprojectMarkdownFormatter::WikiFormatter, ChiliprojectMarkdownFormatter::Helper
 end

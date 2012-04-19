@@ -1,6 +1,6 @@
 require 'redcarpet'
 
-module ChiliProjectMarkdownFormatter
+module ChiliprojectMarkdownFormatter
 
   class WikiFormatter
     def initialize(text)

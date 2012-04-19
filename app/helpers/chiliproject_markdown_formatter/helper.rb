@@ -1,4 +1,4 @@
-module ChiliProjectMarkdownFormatter
+module ChiliprojectMarkdownFormatter
   module Helper
     unloadable
 
