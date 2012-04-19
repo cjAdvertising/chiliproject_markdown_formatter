@@ -66,11 +66,22 @@
       <tr>
         <th><img src="../../../images/jstoolbar/bt_pre.png"
                  class="tool" alt="Preformatted text" /></th>
-        <td>&lt;pre&gt;<br />&nbsp;lines<br />&nbsp;of code<br />&lt;/pre&gt;</td>
+        <td>```<br />&nbsp;lines<br />&nbsp;of code<br />```</td>
         <td>
 <pre>
  lines
  of code
+</pre>
+        </td>
+      </tr>
+      <tr>
+        <th></th>
+        <td>```php<br />if ($var == 'somevalue') {<br />&nbsp;&nbsp;&nbsp;&nbsp;$object->method($otherVar);<br />}<br />```</td>
+        <td>
+<pre>
+<span style="color:green">if</span> (<span style="color:orange">$var</span> == '<span style="color:red">somevalue</span>') {
+    <span style="color:orange">$object</span>-&gt;method(<span style="color:orange">$otherVar</span>);
+}
 </pre>
         </td>
       </tr>
