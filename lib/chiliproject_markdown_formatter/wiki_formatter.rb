@@ -1,4 +1,5 @@
 require 'redcarpet'
+require 'erb'
 
 module ChiliprojectMarkdownFormatter
 
@@ -25,7 +26,7 @@ class HTMLwithSyntaxHighlighting < Redcarpet::Render::HTML
     if language then
       '<pre><code class="' + language + ' syntaxhl">' + Redmine::SyntaxHighlighting.highlight_by_language(code, language) + '</code></pre>'
     else
-      '<pre>' + code + '</pre>'
+      '<pre>' + ERB::Util.html_escape(code) + '</pre>'
     end
   end
 end
