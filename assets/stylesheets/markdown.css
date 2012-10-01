@@ -1,6 +1,6 @@
 /* Buttons
 -------------------------------------------------------- */
-.jstb_em {
+/*.jstb_em {
 	background-image: url(../images/jstoolbar/bt_em.png);
 }
 .jstb_code {
@@ -38,4 +38,8 @@
 }
 .jstb_img {
 	background-image: url(../images/jstoolbar/bt_img.png);
+}*/
+
+textarea.wiki-edit {
+	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 }
